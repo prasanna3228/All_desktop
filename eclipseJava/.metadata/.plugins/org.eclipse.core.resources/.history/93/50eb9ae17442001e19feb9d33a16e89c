@@ -1,0 +1,13 @@
+package properties;
+
+import java.io.File;
+
+public class PropPractice {
+
+	public static void main(String[] args) {
+		
+		File file=new File("dbConfig.properties");
+		
+	}
+
+}

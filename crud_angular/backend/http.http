@@ -1,0 +1,13 @@
+POST http://localhost:3004/mobiles
+Content-Type: application/json
+
+{
+  "id": 100,
+  "name": "Mobile Name",
+  "price": 499,
+  "ram": "8GB",
+  "storage": "128GB"
+}
+###
+DELETE  http://localhost:3004/mobiles/4
+Content-Type: application/json

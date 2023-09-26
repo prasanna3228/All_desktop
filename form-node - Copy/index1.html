@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sample Form</title>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .div1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #cb7be1;
+        padding: 20px;
+        width: 400px;
+
+        border-radius: 8px;
+        box-shadow: 2px 2px 4px 2px rgb(27, 215, 96);
+      }
+      .name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* Add more CSS styles as needed */
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      <form action="/form" method="post">
+        <div class="name">
+          <div>
+            <label for="email">Enter your Email:</label> <br />
+            <input
+              style="width: 250px; height: 24px"
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+          <br />
+          <div>
+            <label for="name">Tell Me About you</label> <br />
+            <textarea
+              cols="30"
+              rows="15"
+              type="text"
+              id="name"
+              name="name"
+              style="width: 250px"
+              required
+            >
+            </textarea>
+          </div>
+          <button type="submit" onclick="showAlert()">Submit</button>
+        </div>
+      </form>
+    </div>
+    <script>
+      // Function to show an alert when the form is submitted successfully.
+      function showAlert() {
+        alert("Form data submitted successfully!");
+      }
+    </script>
+  </body>
+</html>

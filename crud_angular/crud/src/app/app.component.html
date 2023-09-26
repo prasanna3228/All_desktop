@@ -1,0 +1,38 @@
+<div *ngIf="[mobiles]; else err" class="container1 mob-table">
+  <div class="headers">
+    <h4 class="table-title">Manage mobiles</h4>
+    <button class="btn add">Add Mobile</button>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="">Mobile</th>
+        <th>Price(Rs)</th>
+        <th>RAM</th>
+        <th>Storage</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody class="text-center">
+      <tr *ngFor="let mobile of mobiles">
+        <td>{{ mobile["name"] }}</td>
+        <td>{{ mobile["price"] }}</td>
+        <td>{{ mobile["ram"] }}</td>
+        <td>{{ mobile["storage"] }}</td>
+        <td>
+          <button class="btn btn-primary">Edit</button>
+        </td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteMobile(mobile['id'])">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #err class="text-danger">
+  <h1>this is ng template</h1>
+</ng-template>
